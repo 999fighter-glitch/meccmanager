@@ -256,13 +256,13 @@ export const RespondersDirectory: React.FC<RespondersDirectoryProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-bold">
-              <Users size={14} /> PANGKALAN DATA PETUGAS & RESPONDER
+              <Users size={14} /> MECC MANAGEMENT BOARD • PANGKALAN DATA RESPONDER
             </div>
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-white flex items-center gap-2">
-              Direktori Nama Responder
+              MECC Management Board: Direktori Responder
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
-              Senarai lengkap semua Penolong Pegawai Perubatan (PPP), Responder St. John Ambulance Malaysia, dan petugas kesihatan yang berdaftar dalam sistem bagi kontinjen Klang & Banting.
+              Senarai lengkap semua Penolong Pegawai Perubatan (PPP), Responder St. John Ambulance Malaysia, dan petugas kesihatan bagi semua wilayah terlibat (Klang, Banting, Shah Alam & HASA).
             </p>
           </div>
 

@@ -217,7 +217,7 @@ export const MeccStatus: React.FC<MeccStatusProps> = ({
     msg += `👤 Tiada Pemandu / Staff: ${summaryStats.tiadaStaff}\n`;
     msg += `🛑 Tidak Beroperasi (Off): ${summaryStats.off}\n`;
     msg += `📊 Jumlah Pasukan: ${summaryStats.total}\n\n`;
-    msg += `_Laporan dijana secara automatik melalui Sistem Medisys MECC._`;
+    msg += `_Laporan dijana secara automatik melalui MECC Management Board._`;
 
     return msg;
   };
@@ -249,13 +249,13 @@ export const MeccStatus: React.FC<MeccStatusProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-200 border border-amber-400/30 text-xs font-bold">
-              <Radio size={14} className="animate-pulse" /> PUSAT KAWALAN MECC (MEDICAL EMERGENCY COORDINATION CENTRE)
+              <Radio size={14} className="animate-pulse" /> MECC MANAGEMENT BOARD • WILAYAH BANTING, SHAH ALAM & HASA
             </div>
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
-              MECC Ambulance Status & Deployment
+              MECC Management Board: Status Ambulans
             </h1>
             <p className="text-xs sm:text-sm text-amber-100/90 max-w-2xl">
-              Kemaskini penugasan shif ambulans bagi PKD Banting (KK Telok Panglima Garang, Jenjarom, Bandar, Bukit Changgang, Tg Sepat), Hospital Banting (Banting 1, 2), Shah Alam (SA 1, 2) & HASA.
+              Kemaskini penugasan shif ambulans bagi semua wilayah terlibat: PKD Banting (KK Telok Panglima Garang, Jenjarom, Bandar, Bukit Changgang, Tg Sepat), Hospital Banting (Banting 1, 2), Shah Alam (SA 1, 2) & HASA.
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 {
-  "name": "POZ HTAR Status Tracker",
-  "description": "Ambulance team readiness reporting system for POZ Hospital Tengku Ampuan Rahimah.",
+  "name": "MECC Management Board",
+  "description": "MECC Management Board - Sistem Pemantauan & Kesiapsiagaan Ambulans Bersepadu bagi semua wilayah: Klang, Banting, Shah Alam & HASA.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

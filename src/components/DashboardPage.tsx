@@ -351,13 +351,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-bold">
-              <Truck size={14} /> STATUS ARMADA AMBULANS BERSEPADU
+              <Truck size={14} /> MECC MANAGEMENT BOARD • SEMUA WILAYAH TERLIBAT
             </div>
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-white flex items-center gap-2">
-              Dashboard Status Ambulans
+              MECC Management Board: Dashboard Ambulans
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
-              Pemantauan masa nyata keseluruhan armada ambulans bagi Daerah Klang (HTAR & KK) dan MECC (PKD Banting, Hosp Banting, Shah Alam & HASA). Kemaskini pantas boleh dibuat secara langsung menggunakan <strong>ikon pensel</strong>.
+              Pemantauan masa nyata keseluruhan armada ambulans bagi semua wilayah terlibat: Daerah Klang (HTAR & KK), PKD Banting, Hospital Banting, Shah Alam & HASA. Kemaskini pantas boleh dibuat secara langsung menggunakan <strong>ikon pensel</strong>.
             </p>
             <div className="flex flex-wrap items-center gap-3 pt-2 text-xs text-slate-300">
               <span className="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1 rounded-lg border border-slate-700">

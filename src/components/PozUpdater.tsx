@@ -397,7 +397,7 @@ export const PozUpdater: React.FC<PozUpdaterProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-200 border border-rose-400/30 text-xs font-bold">
-              <ShieldCheck size={14} /> POZ HOSPITAL TENGKU AMPUAN RAHIMAH KLANG
+              <ShieldCheck size={14} /> MECC MANAGEMENT BOARD • WILAYAH KLANG (POZ HTAR)
             </div>
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
               POZ Updater: Kesiapsiagaan Pasukan Ambulans

@@ -92,13 +92,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({
         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-bold tracking-wide">
-              <Sparkles size={14} /> PUSAT KAWALAN OPERASI AMBULANS
+              <Sparkles size={14} /> PUSAT KAWALAN OPERASI • SEMUA WILAYAH
             </div>
-            <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-white">
-              Sistem Kesiapsiagaan Ambulans & MECC
+            <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-white uppercase">
+              MECC MANAGEMENT BOARD
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
-              Portal sehenti pengurusan kesiapsiagaan ambulans Kontinjen Klang & Banting. Sila pilih pautan modul di bawah untuk memantau status armada, mengemaskini penugasan shif, atau membuat tetapan sistem.
+              Portal sehenti pengurusan kesiapsiagaan armada ambulans MECC Management Board bagi semua wilayah terlibat (Klang, PKD Banting, Hospital Banting, Shah Alam & HASA). Sila pilih pautan modul di bawah untuk memantau status armada, mengemaskini penugasan shif, atau membuat tetapan sistem.
             </p>
             
             <div className="flex flex-wrap items-center gap-2.5 pt-2 text-xs text-slate-300">
@@ -184,7 +184,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-                  Paparan komprehensif status kesemua pasukan ambulans zon Klang & MECC. Membolehkan <strong>kemaskini pantas secara terus menggunakan ikon pensel</strong> serta dialog pengesahan sebelum perubahan disimpan.
+                  Paparan komprehensif status kesemua pasukan ambulans bagi semua wilayah terlibat (Klang, Banting, Shah Alam & HASA). Membolehkan <strong>kemaskini pantas secara terus menggunakan ikon pensel</strong> serta dialog pengesahan sebelum perubahan disimpan.
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-1.5">

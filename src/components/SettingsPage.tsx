@@ -208,7 +208,7 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({
     const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(backup, null, 2));
     const downloadAnchor = document.createElement('a');
     downloadAnchor.setAttribute('href', dataStr);
-    downloadAnchor.setAttribute('download', `medisys_backup_${new Date().toISOString().slice(0, 10)}.json`);
+    downloadAnchor.setAttribute('download', `mecc_management_board_backup_${new Date().toISOString().slice(0, 10)}.json`);
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
@@ -306,13 +306,13 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-xs font-bold">
-              <Sliders size={14} className="text-rose-400" /> PANEL PENGURUSAN SISTEM
+              <Sliders size={14} className="text-rose-400" /> MECC MANAGEMENT BOARD • PENGURUSAN SISTEM
             </div>
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
-              Tetapan & Konfigurasi Pasukan
+              Tetapan MECC Management Board
             </h1>
             <p className="text-xs sm:text-sm text-slate-400 max-w-xl">
-              Urus senarai pasukan ambulans, responder, kategori klinik, tetapan aplikasi dan sandaran pangkalan data tempatan.
+              Urus senarai pasukan ambulans, responder, tetapan aplikasi dan sandaran pangkalan data bagi semua wilayah terlibat (Klang, Banting, Shah Alam & HASA).
             </p>
           </div>
 

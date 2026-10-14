@@ -323,12 +323,12 @@ export default function App() {
       <footer className="bg-slate-900 text-slate-400 border-t border-slate-800 text-xs py-6 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-white">MEDISYS Portal</span>
+            <span className="font-bold text-white uppercase tracking-wider">MECC MANAGEMENT BOARD</span>
             <span>•</span>
-            <span>POZ HTAR & MECC Ambulance Operations</span>
+            <span>Sistem Kesiapsiagaan Operasi Ambulans</span>
           </div>
-          <div className="text-slate-500 text-[11px]">
-            Daerah Klang & PKD Banting • Status Kesiapsiagaan Shif {shift}
+          <div className="text-slate-400 text-[11px]">
+            Semua Wilayah: Klang • PKD Banting • Hospital Banting • Shah Alam • HASA • Shif {shift}
           </div>
         </div>
       </footer>

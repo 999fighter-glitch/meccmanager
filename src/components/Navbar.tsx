@@ -96,15 +96,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-black text-lg sm:text-xl tracking-tight text-white group-hover:text-rose-300 transition-colors">
-                  MEDISYS
+                <span className="font-black text-base sm:text-xl tracking-tight text-white group-hover:text-rose-300 transition-colors uppercase">
+                  MECC MANAGEMENT BOARD
                 </span>
                 <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40">
-                  KLANG & BANTING
+                  SEMUA WILAYAH
                 </span>
               </div>
               <p className="text-[11px] sm:text-xs text-slate-400 font-medium tracking-wide">
-                POZ Updater • MECC Ambulance Operations
+                KLANG • BANTING • SHAH ALAM • HASA
               </p>
             </div>
           </div>
