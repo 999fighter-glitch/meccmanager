@@ -3,19 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export interface PPPContact {
-  id: string;
-  name: string;
-  personalPhone: string;
-  category: string;
-}
+import { PPPContact, AmbulanceTeam, Shift, MeccTeam, MeccStatusType } from './types.ts';
 
-export interface AmbulanceTeam {
-  id: string;
-  name: string;
-  tmPhone: string;
-  defaultStatus: boolean;
-}
+export * from './types.ts';
 
 export const PPP_LIST: PPPContact[] = [
   // CONTACT PPP PHC HTAR
@@ -96,27 +86,120 @@ export const STJOHN_RESPONDERS = [
 ];
 
 export const AMBULANCE_TEAMS: AmbulanceTeam[] = [
-  { id: 'htar1', name: 'HTAR_1_Sel_H', tmPhone: '01162621438', defaultStatus: true },
-  { id: 'htar2', name: 'HTAR_2_Sel_H', tmPhone: '01162621432', defaultStatus: true },
-  { id: 'htar3', name: 'HTAR_3_Sel_H', tmPhone: '01162621451', defaultStatus: true },
-  { id: 'htar4', name: 'HTAR_4_Sel_H', tmPhone: '01162619400', defaultStatus: true },
-  { id: 'pulauindah1', name: 'Pulau indah_1_Sel_KK', tmPhone: '01162616949', defaultStatus: true },
-  { id: 'kkkapar1', name: 'KK_Kapar_1_Sel_KK', tmPhone: '01162619655', defaultStatus: true },
-  { id: 'meru1', name: 'Meru_1_Sel_KK', tmPhone: '01162620457', defaultStatus: true },
-  { id: 'stjohn4', name: 'St. John_4_Sel_KK', tmPhone: '01162619488', defaultStatus: true },
-  { id: 'anika1', name: 'Anika_1_Sel_KK', tmPhone: '01162619500', defaultStatus: false },
-  { id: 'botanik1', name: 'Botanik_1_Sel_KK', tmPhone: '01162619511', defaultStatus: false },
-  { id: 'bukitkuda1', name: 'Bukit Kuda_1_Sel_H', tmPhone: 'N/A', defaultStatus: false },
-  { id: 'bukitnaga1', name: 'Bukit Naga_1_Sel_H', tmPhone: 'N/A', defaultStatus: false },
-  { id: 'pandamaran1', name: 'Pandamaran _1_Sel_KK', tmPhone: '01162621865', defaultStatus: false },
-  { id: 'portklang1', name: 'Port klang_1_Sel_KK', tmPhone: '01162616944', defaultStatus: false },
-  { id: 'rantaupanjang1', name: 'Rantau Panjang_1_Sel_KK', tmPhone: '01162616971', defaultStatus: false },
+  { id: 'htar1', name: 'HTAR_1_Sel_H', tmPhone: '01162621438', defaultStatus: true, category: 'PHC HTAR' },
+  { id: 'htar2', name: 'HTAR_2_Sel_H', tmPhone: '01162621432', defaultStatus: true, category: 'PHC HTAR' },
+  { id: 'htar3', name: 'HTAR_3_Sel_H', tmPhone: '01162621451', defaultStatus: true, category: 'PHC HTAR' },
+  { id: 'htar4', name: 'HTAR_4_Sel_H', tmPhone: '01162619400', defaultStatus: true, category: 'PHC HTAR' },
+  { id: 'pulauindah1', name: 'Pulau indah_1_Sel_KK', tmPhone: '01162616949', defaultStatus: true, category: 'KK P.INDAH' },
+  { id: 'kkkapar1', name: 'KK_Kapar_1_Sel_KK', tmPhone: '01162619655', defaultStatus: true, category: 'KK KAPAR' },
+  { id: 'meru1', name: 'Meru_1_Sel_KK', tmPhone: '01162620457', defaultStatus: true, category: 'KK MERU' },
+  { id: 'stjohn4', name: 'St. John_4_Sel_KK', tmPhone: '01162619488', defaultStatus: true, category: 'ST JOHN' },
+  { id: 'anika1', name: 'Anika_1_Sel_KK', tmPhone: '01162619500', defaultStatus: false, category: 'KK ANIKA' },
+  { id: 'botanik1', name: 'Botanik_1_Sel_KK', tmPhone: '01162619511', defaultStatus: false, category: 'KK BOTANIK' },
+  { id: 'bukitkuda1', name: 'Bukit Kuda_1_Sel_H', tmPhone: 'N/A', defaultStatus: false, category: 'KK BUKIT KUDA' },
+  { id: 'bukitnaga1', name: 'Bukit Naga_1_Sel_H', tmPhone: 'N/A', defaultStatus: false, category: 'KK BUKIT NAGA' },
+  { id: 'pandamaran1', name: 'Pandamaran _1_Sel_KK', tmPhone: '01162621865', defaultStatus: false, category: 'KK PANDAMARAN' },
+  { id: 'portklang1', name: 'Port klang_1_Sel_KK', tmPhone: '01162616944', defaultStatus: false, category: 'KK PORT KLANG' },
+  { id: 'rantaupanjang1', name: 'Rantau Panjang_1_Sel_KK', tmPhone: '01162616971', defaultStatus: false, category: 'KK RANTAU PANJANG' },
 ];
 
-export type Shift = 'AM' | 'PM' | 'ON';
+export const SHIFT_DETAILS: Record<Shift, { label: string; time: string; badge: string }> = {
+  AM: { label: 'AM (Pagi)', time: '0700-1400', badge: 'bg-amber-100 text-amber-900 border-amber-300' },
+  PM: { label: 'PM (Petang)', time: '1400-2100', badge: 'bg-sky-100 text-sky-900 border-sky-300' },
+  ON: { label: 'ON (Malam)', time: '2100-0700', badge: 'bg-indigo-100 text-indigo-900 border-indigo-300' },
+};
 
-export const SHIFT_DETAILS: Record<Shift, { label: string; time: string }> = {
-  AM: { label: 'AM', time: '0700-1400' },
-  PM: { label: 'PM', time: '1400-2100' },
-  ON: { label: 'ON', time: '2100-0700' },
+export const AVAILABLE_CATEGORIES = [
+  'PHC HTAR',
+  'KK KAPAR',
+  'KK MERU',
+  'KK P.INDAH',
+  'KK ANIKA',
+  'KK BOTANIK',
+  'KK BUKIT KUDA',
+  'KK BUKIT NAGA',
+  'KK PANDAMARAN',
+  'KK PORT KLANG',
+  'KK RANTAU PANJANG',
+  'PKD BANTING',
+  'BANTING',
+  'SHAH ALAM',
+  'HASA',
+  'LAIN-LAIN'
+];
+
+// MECC AMBULANCE STATUS TEAMS LIST as requested by user
+export const DEFAULT_MECC_TEAMS: MeccTeam[] = [
+  // PKD BANTING
+  { id: 'mecc_kk_tpg', name: 'KK Telok Panglima Garang', category: 'PKD BANTING', defaultStatus: 'SIAP_SEDIA', phone: '03-31227333' },
+  { id: 'mecc_kk_jenjarom', name: 'KK Jenjarom', category: 'PKD BANTING', defaultStatus: 'SIAP_SEDIA', phone: '03-31913333' },
+  { id: 'mecc_kk_bandar', name: 'KK Bandar', category: 'PKD BANTING', defaultStatus: 'SIAP_SEDIA', phone: '03-31201234' },
+  { id: 'mecc_kk_changgang', name: 'KK Bukit Changgang', category: 'PKD BANTING', defaultStatus: 'SIAP_SEDIA', phone: '03-31491234' },
+  { id: 'mecc_kk_tgsepat', name: 'KK Tg Sepat', category: 'PKD BANTING', defaultStatus: 'SIAP_SEDIA', phone: '03-31974234' },
+
+  // BANTING
+  { id: 'mecc_banting_1', name: 'Banting 1', category: 'BANTING', defaultStatus: 'SIAP_SEDIA', phone: '03-31871333' },
+  { id: 'mecc_banting_2', name: 'Banting 2', category: 'BANTING', defaultStatus: 'SIAP_SEDIA', phone: '03-31871334' },
+
+  // SHAH ALAM
+  { id: 'mecc_sa_1', name: 'SA 1', category: 'SHAH ALAM', defaultStatus: 'SIAP_SEDIA', phone: '03-55263000' },
+  { id: 'mecc_sa_2', name: 'SA 2', category: 'SHAH ALAM', defaultStatus: 'SIAP_SEDIA', phone: '03-55263001' },
+
+  // HASA
+  { id: 'mecc_hasa_1', name: 'HASA 1', category: 'HASA', defaultStatus: 'SIAP_SEDIA', phone: '03-55442000' },
+];
+
+export const MECC_CATEGORIES = [
+  'PKD BANTING',
+  'BANTING',
+  'SHAH ALAM',
+  'HASA'
+];
+
+export const MECC_STATUS_CONFIG: Record<MeccStatusType, { label: string; shortLabel: string; bg: string; text: string; border: string; dot: string; icon: string }> = {
+  SIAP_SEDIA: {
+    label: 'Siap Sedia (Beroperasi)',
+    shortLabel: 'SIAP SEDIA',
+    bg: 'bg-emerald-500/10 text-emerald-700',
+    text: 'text-emerald-700',
+    border: 'border-emerald-300',
+    dot: 'bg-emerald-500',
+    icon: 'CheckCircle2'
+  },
+  ON_CALL: {
+    label: 'On Call (Kes)',
+    shortLabel: 'ON CALL',
+    bg: 'bg-amber-500/10 text-amber-800',
+    text: 'text-amber-800',
+    border: 'border-amber-300',
+    dot: 'bg-amber-500',
+    icon: 'Clock'
+  },
+  ROSAK: {
+    label: 'Rosak / Penyelenggaraan',
+    shortLabel: 'ROSAK',
+    bg: 'bg-rose-500/10 text-rose-700',
+    text: 'text-rose-700',
+    border: 'border-rose-300',
+    dot: 'bg-rose-500',
+    icon: 'XCircle'
+  },
+  TIADA_STAFF: {
+    label: 'Tiada Pemandu / Anggota',
+    shortLabel: 'TIADA STAFF',
+    bg: 'bg-orange-500/10 text-orange-800',
+    text: 'text-orange-800',
+    border: 'border-orange-300',
+    dot: 'bg-orange-500',
+    icon: 'User'
+  },
+  OFF: {
+    label: 'Tidak Beroperasi / Off',
+    shortLabel: 'OFF',
+    bg: 'bg-slate-500/10 text-slate-700',
+    text: 'text-slate-700',
+    border: 'border-slate-300',
+    dot: 'bg-slate-400',
+    icon: 'ShieldCheck'
+  }
 };
